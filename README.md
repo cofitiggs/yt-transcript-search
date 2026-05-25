@@ -65,9 +65,8 @@ video_title.txt
     123.45 - 128.60: the matching line of transcript text
 ```
 
-The numbers are timestamps in seconds, so you can jump directly to that point in the video.
-
 ## Notes
 
 - Transcript fetching sleeps 60-120 seconds between requests to avoid rate limiting. For a large history this can take several hours.
 - Videos that are private, deleted, or have no auto-generated captions, or otherwise return as bad requests, will be skipped and logged to `links_with_errors.txt`.
+- The timestamps overlapping are a known thing, this is from the youtube_transcript_api. [See this issue for more information.](https://github.com/jdepoix/youtube-transcript-api/issues/21#issuecomment-520043638)
